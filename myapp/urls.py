@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns=[
-    re_path('^$',views.welcome,name = 'welcome'),
+    re_path('^$',views.display,name = 'display'),
 
 ]
 if settings.DEBUG:
