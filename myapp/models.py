@@ -1,3 +1,4 @@
+import re
 from django.db import models
 
 # Create your models here.
@@ -37,6 +38,27 @@ class Image(models.Model):
 
     def delete_img(self):
         self.delete 
+
+    @classmethod
+    def search_category(cls,search_term) :
+        search_results = cls.objects.filter(img_category__category_name__icontains=search_term)
+        return search_results
+
+    @classmethod
+    def search_location(cls,location) :
+        filter_location = cls.objects.filter(img_location__location_name__icontains=location)
+        return filter_location 
+
+    @classmethod
+    def get_img_by_id(cls,input_id)  :
+        filt_img=cls.objects.get(id=input_id) 
+        return filt_img  
+
+    @classmethod
+    def get_all(cls):
+        all_images=Image.objects.all()  
+        return all_images 
+  
         
                
 
