@@ -1,10 +1,10 @@
-# from django.urls import re_path
-from django.conf.urls import url
+from django.urls import re_path
+# from django.conf.urls import url
 
 
 from . import views
 
 urlpatterns=[
-    url('^$',views.welcome,name = 'welcome'),
+    re_path('^$',views.welcome,name = 'welcome'),
 
 ]
