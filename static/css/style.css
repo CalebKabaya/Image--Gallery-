@@ -1,0 +1,33 @@
+h1{
+    color: red;
+}
+#bgimg{
+    background: url("/static/images/b.jpg") 50% 0 no-repeat fixed;
+    height: 100vh;
+
+}
+.navbar{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    z-index: 9999;
+    width: 100%;
+}
+.navbar-brand{
+    color: white;
+}
+.nav-item a{
+    color: white;
+}
+.about {
+    /* width: 90%; */
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* padding: 30px 30px; */
+
+}
