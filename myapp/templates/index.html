@@ -12,7 +12,22 @@
 </section>
 <section>
     {% for image in all_images %}
-    <img src="{{image.img_path.url}}" alt="{{image.name}}" class="card-img">
+    <div class="wrapper">
+        <!-- <a  data-fancybox="gallery" href="{{image.img_path.url}}" data-buttons='["zoom","slideShow","fullScreen","thumbs","share","close"]' data-caption="{{image.img_name}}"  <p>Description {{image.img_decription}} </p>> <img src="{{image.img_path.url}}" alt="">
+
+        
+        </a> -->
+        <a href="{{image.img_path.url}}"  data-fancybox="images" data-buttons='["zoom","slideShow","fullScreen","thumbs","share","close"]' data-caption='<a href="{{image.img_path.url}}"><h6>{{image.img_name}}</h6></a>
+        <p>{{image.img_decription}}</p>
+        <p>Location: {{image.img_location}} / Category: {{image.img_category}}</p>
+        <button class="rounded btn-primary" onclick=copyLink("{{image.id}}-url") >📋Copy Link</button>'>
+
+<img class="rounded image" src="{{image.img_path.url}}" alt="{{image.img_name}}">
+</a>
+        <!-- <a  data-fancybox="gallery" href="{{image.img_path.url}}" data-caption="spa"> <img src="{{image.img_path.url}}" alt="" ></a> -->
+        <!-- "{{image.img_name}}{{image.img_decription}}  " -->
+    </div>
+    <!-- <img src="{{image.img_path.url}}" alt="{{image.name}}" class="card-img"> -->
 
     {{image.img_name}}
 
