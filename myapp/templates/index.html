@@ -10,6 +10,15 @@
         </div>
     </div>
 </section>
+<section>
+    {% for image in all_images %}
+    <img src="{{image.img_path.url}}" alt="{{image.name}}" class="card-img">
+
+    {{image.img_name}}
+
+    {%endfor%}
+    
+
 
 
 {% endblock %}
