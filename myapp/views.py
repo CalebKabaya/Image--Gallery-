@@ -1,6 +1,13 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Image,Category,Location
 
 # Create your views here.
 def display(requests):
-    return render(requests,'index.html')
+    all_images= Image.objects.all()
+    locations=Location.objects.all()
+    categories=Category.objects.all()
+    title= 'Home'
+
+
+    return render(requests,'index.html',{'all_images':all_images,'locations':locations,'categories':categories,'title':title})
+
