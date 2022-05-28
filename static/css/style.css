@@ -84,3 +84,18 @@ h1{
     -webkit-transition: visibility 0s, opacity 0.5s linear;  
     transition: visibility 0s, opacity 0.5s linear;
 }
+#btns{
+    border-radius: 10px;
+}
+#btnss{
+    border-radius: 30px;
+    background-color: red;
+
+}
+#btnss:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid rgb(253, 0, 0);
+
+
+}
