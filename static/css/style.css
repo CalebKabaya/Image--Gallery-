@@ -22,6 +22,7 @@ h1{
     color: white;
     font-family: 'Roboto Slab', serif;
     font-weight: lighter;
+    margin-right: 30px;
 
 }
 .about {
@@ -71,6 +72,12 @@ h1{
 .images{
     background-color: black;
 }
+#cont{
+    background-color: black;
+    height: 100vh;
+    margin-top: 30px;
+ 
+}
 .description{
     position: absolute;
     bottom: 0;
@@ -97,5 +104,9 @@ h1{
     color: white;
     border: 2px solid rgb(253, 0, 0);
 
+
+}
+#form{
+    border: 2px solid rgb(253, 0, 0);
 
 }
