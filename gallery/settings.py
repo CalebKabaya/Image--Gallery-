@@ -22,7 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 import os
 import django_heroku
 import dj_database_url
-from decouple import config,Csv
+from decouple import Csv
+from decouple import config
+
 
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
