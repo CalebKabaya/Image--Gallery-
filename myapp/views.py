@@ -45,12 +45,17 @@ def categories_display(request,category):
     categories=Category.objects.all()
     title = f"(category)"
     category_results= Image.search_category(category)
+    # Set up Pagination
+ 
+
     return render(request,'index.html',{"title":title,"all_images":category_results,"categories":categories})
 
 def location_display(request,location):
     locations=Location.objects.all()
     title = f"(location)"
     location_results= Image.search_location(location)
+
+     # Set up Pagination
     return render(request,'index.html',{"title":title,"all_images":location_results,"locations":locations})
 
 
