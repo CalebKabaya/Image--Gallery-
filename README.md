@@ -14,6 +14,7 @@ Landing Page
 ```
 <img src="./static/images/2.png">
 <img src="./static/images/3.png">
+
 ```
 Mobile View
 ```
