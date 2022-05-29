@@ -7,10 +7,19 @@ A personal gallery application to display various photos by categories and locat
 
 [CalebKabaya](https://github.com/CalebKabaya/)
 
+### Screenshots
+
 ```
 Landing Page
 ```
-<img src="./static/images/19.png">
+<img src="./static/images/2.png">
+<img src="./static/images/3.png">
+```
+Mobile View
+```
+<img src="./static/images/4.png">
+
+
 
 ### User Stories
 + [x] View different photos that interest me.
