@@ -160,6 +160,43 @@ h1{
 }  */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 756px) {
+    .about h3{
+        font-size: 33px;
+    }
+    #btnss{
+        font-size: 30px;
+    }
+    #btns{
+        font-size: 30px;
+
+    }
+    #form{
+        font-size: 30px;
+
+    }
+    #row-parallax h2{
+        font-size: 33px;
+
+    }
+    #row-parallax p{
+        font-size: 30px;
+
+    }
+    #drop{
+        font-size: 30px;
+
+    }
+    #cont-title{
+        font-size: 34px;
+    }
+    .navbar-brand{
+        font-size: 34px;
+    }
+    .nav-item a{
+      font-size: 30px;
+    
+    }
+   
     #row{
         display: flex;
         flex-direction: column;
@@ -172,6 +209,43 @@ h1{
     } 
   }
   @media only screen and (min-device-width: 0px) and (max-device-width: 320px) {
+    .about h3{
+        font-size: 38px;
+    }
+    #btnss{
+        font-size: 33px;
+    }
+    #btns{
+        font-size: 42px;
+
+    }
+    #drop{
+        font-size: 40px;
+
+    }
+    #form{
+        font-size: 40px;
+
+    }
+    #cont-title{
+        font-size: 42px;
+    }
+    .navbar-brand{
+        font-size: 50px;
+    }
+    .nav-item a{
+      font-size: 44px;
+    
+    }
+    #row-parallax h2{
+        font-size: 44px;
+
+    }
+    #row-parallax p{
+        font-size: 38px;
+
+    }
+
     #row{
         display: flex;
         flex-direction: column;
