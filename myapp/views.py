@@ -1,16 +1,29 @@
 from email import message
 from django.shortcuts import render
 from .models import Image,Category,Location
+# pagination
+from django.core.paginator import Paginator
+
 
 # Create your views here.
 def display(requests):
     all_images= Image.objects.all()
     locations=Location.objects.all()
     categories=Category.objects.all()
+    # Set up Pagination
+    p = Paginator(Image.objects.all(), 12)
+    page = requests.GET.get('page')
+    images_all = p.get_page(page)
+    nums = "a" * images_all.paginator.num_pages
+
+
+
+
+
     title= 'Home'
 
 
-    return render(requests,'index.html',{'all_images':all_images,'locations':locations,'categories':categories,'title':title})
+    return render(requests,'index.html',{'all_images':all_images,'locations':locations,'categories':categories,'title':title,'nums':nums,'images_all':images_all})
 
 def search_results(request):
     locations = Location.objects.all()

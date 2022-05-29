@@ -7,17 +7,22 @@
             <h3>Welcome to my Gallery</h3>
             <a href="#C">
                 <button type="button" class="btn" id="btnss">View Images</button>
-
             </a>
+            <div class="arrow bounce">
+
+            </div>
 
         </div>
     </div>
 </section>
 <section class="images" id="C">
+    <h3 class="text-center" id="cont-title">Image Gallery</h3>
+
     <div class="container-fluid">
 
-        <div class="row">
-            {% for image in all_images %}
+        <div class="row" id="row">
+            {% for image in images_all %}
+
 
             <div class="col-md-3" id="imgcont">
 
@@ -46,15 +51,122 @@
             <div class="description" >
                 <h6 class="text" >{{image.img_name}}</h6>
               </div>
-            {%endfor%}
+              {%endfor%}
 
 
         </div>
 
+
     </div>
 
+</section>
+<nav aria-label="Page navigation example" id="paginator">
+    <ul class="pagination justify-content-center">
+      
+   
+  
+  {% if venues.has_previous %}
+      <li class="page-item"><a class="page-link" href="?page=1">&laquo First</a></li>
+  
+      <li class="page-item"><a class="page-link" href="?page={{ venues.previous_page_number }}">Previous</a></li>
+      
+  {% endif %}
+  
+  <!--
+  <li class="page-item disabled"><a href="#" class="page-link">Page {{ venues.number }} of {{ venues.paginator.num_pages }}</a></li>
+  -->
+  
+  {% for i in nums %}
+      <li class="page-item"><a class="page-link" href="?page={{ forloop.counter }}">{{ forloop.counter }}</a></li>
+  
+  {% endfor %}
+  
+  
+  {% if venues.has_next %}
+      <li class="page-item"><a class="page-link" href="?page={{ venues.next_page_number }}">Next</a></li>
+  
+      <li class="page-item"><a class="page-link" href="?page={{ venues.paginator.num_pages }}">Last &raquo</a></li>
+  
+  {% endif %}
+   </ul>
+  </nav>
+
+  <div class="container-fluid" id="cont-parallax">
+    <div class="parallax">
+        <div class="parallax-inner">
+            <div class="container text-center text-light">
+                <div class="row align-items-center" id="row-parallax">
+                    <div class="col-6" id="texts-b">
+                        <h2 class="">Kaleb's Gallery</h2>
+                        <p class="">The world without photography will be meaningless to us if there is no light and color, which opens up our minds and expresses passion</p>
+                    </div>
+                    <div class="col-6">
+                        <h2>Contacts</h2>
+                        <p>Email : calebkabaya7@gmail.com</p>
+                        <p>Phone : +245748860959</p>
+                    </div>
+                  
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<footer class="page-footer font-large">
+
+    <!-- Footer Elements -->
+    <div class="container">
+  
+      <!-- Grid row-->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-12 py-5">
+          <div class="mb-5 flex-center" id="fab">
+  
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!--Pinterest-->
+            <a class="pin-ic">
+              <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+            </a>
+          </div>
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row-->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2022 Copyright:Kaleb's Gallery
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+
+  
     
-
-
-
 {% endblock %}

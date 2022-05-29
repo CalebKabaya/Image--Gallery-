@@ -96,13 +96,15 @@ h1{
 }
 #btnss{
     border-radius: 30px;
-    background-color: red;
-
-}
-#btnss:hover {
     background-color: black;
     color: white;
     border: 2px solid rgb(253, 0, 0);
+
+}
+#btnss:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 0, 0);
 
 
 }
@@ -110,3 +112,101 @@ h1{
     border: 2px solid rgb(253, 0, 0);
 
 }
+
+#paginator{
+    background-color: black;
+    color: white;
+}
+#paginator a{
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    font-weight: bolder;
+}
+#body{
+    background-color: black;
+}
+#cont-title{
+    color: rgb(255, 0, 0);
+}
+
+/* BUNNER */
+.parallax {
+    background-image:url("/static/images/1.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+
+}
+#cont-parallax{
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+
+}
+.parallax-inner {
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+#fab a:hover{
+    color: red;
+
+}
+ /* #row{
+    display: flex;
+    flex-direction: row;
+    background-color: aliceblue;
+} 
+#imgcont{
+    width: 100%;
+}  */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 756px) {
+    #row{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #imgcont{
+         width: 100%; 
+         padding-left: 40px;
+        padding-left: 40px;
+    } 
+  }
+  @media only screen and (min-device-width: 0px) and (max-device-width: 320px) {
+    #row{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #imgcont{
+         width: 100%; 
+         padding-left: 40px;
+        padding-left: 40px;
+    } 
+  }
+
+/* @media screen and (max-width: 756px){
+    #row{
+        display: flex;
+        flex-direction: column;
+        background-color: aliceblue;
+        width: 100%;
+    }
+    #imgcont{
+         width: 100%; 
+         padding-left: 40px;
+        padding-left: 40px;
+    } 
+} */
+
+/* @media screen and (min-width: 756px) { */
+    /* #row{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #imgcont{
+        /* width: 100%; */
+        /* padding-left: 40px;
+        padding-left: 40px;
+    } */ 
+  /* } */
