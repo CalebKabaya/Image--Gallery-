@@ -36,11 +36,14 @@
                     <a href="{{image.img_path.url}}" id="forimg"  data-fancybox="gallery" data-buttons='["zoom","slideShow","fullScreen","thumbs","share","close"]' data-caption='<a href="{{image.img_path.url}}"><h6>Title : {{image.img_name}}</h6></a>
                     <p> Description :{{image.img_decription}}</p>
                     <p>Location: {{image.img_location}} / Category: {{image.img_category}}</p>
+                    <p><a href="{{image.img_path.url}}" target="_blank"> Open In New Tab</a>
+                    </p>
+
                     <button class="rounded btn-danger" onclick=copyLink("{{image.id}}-url") >📋Copy Link</button>'>
             
             <img class="rounded image" src="{{image.img_path.url}}" alt="{{image.img_name}}">
             </a>
-            <input type="text" id="{{image.id}}-url" class="d-none form-control input-sm " value="https://kalebsgallery.herokuapp.com{{image.img_path.url}}">
+            <input type="text" id="{{image.id.url}}" class="d-none form-control input-sm " value="https://kalebsgallery.herokuapp.com{{image.img_path.url}}">
 
                     <!-- <a  data-fancybox="gallery" href="{{image.img_path.url}}" data-caption="spa"> <img src="{{image.img_path.url}}" alt="" ></a> -->
                     <!-- "{{image.img_name}}{{image.img_decription}}  " -->
@@ -175,7 +178,9 @@
       var copyText = document.getElementById(imageid);
       copyText.select();
       document.execCommand("copy");
-      console.log(copyText)
+      navigator.clipboard.writeText(copyText);
+
+      console.log(copyText.value)
       alert("Link copied to clipboard: " + copyText.value);
     }
     // copyLink =(element) => {
@@ -185,6 +190,6 @@
     
     </script>
 
-  
+
     
 {% endblock %}
