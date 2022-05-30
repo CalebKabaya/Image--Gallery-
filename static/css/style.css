@@ -167,6 +167,9 @@ input::placeholder {
     .about h3{
         font-size: 33px;
     }
+    input::placeholder {
+        font-size: 20px;
+    }
     #btnss{
         font-size: 30px;
     }
@@ -222,6 +225,9 @@ input::placeholder {
     #btns{
         font-size: 42px;
 
+    }
+    input::placeholder {
+        font-size: 30px;
     }
     #drop{
         font-size: 40px;
