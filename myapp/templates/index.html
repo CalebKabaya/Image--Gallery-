@@ -38,8 +38,8 @@
                     <p>Location: {{image.img_location}} / Category: {{image.img_category}}</p>
                     <p><a href="{{image.img_path.url}}" target="_blank"> Open In New Tab</a>
                     </p>
-
-                    <button class="rounded btn-danger" onclick=copyLink("{{image.id}}-url") >📋Copy Link</button>'>
+                    
+                    <button class="rounded btn-danger" value="{{image.img_path.url}}" id="copy" onclick=copyFunction() >📋Copy Link</button>'>
             
             <img class="rounded image" src="{{image.img_path.url}}" alt="{{image.img_name}}">
             </a>
@@ -173,16 +173,27 @@
   <!-- Footer -->
 
   <script>
-    function copyLink(imageid) {
-      console.log("copied");
-      var copyText = document.getElementById(imageid);
-      copyText.select();
-      document.execCommand("copy");
-      navigator.clipboard.writeText(copyText);
 
-      console.log(copyText.value)
-      alert("Link copied to clipboard: " + copyText.value);
-    }
+function copyFunction() {
+        //  Get the text field by its id
+        let copiedLinkText = document.getElementById("copy");
+
+        //   copy text inside the readonly input field
+        navigator.clipboard.writeText(copiedLinkText.value);
+      
+        /* Alert the copied text */
+        alert("Successfully copied the link.Now share your favourite image:" + copiedLinkText.value);
+      }
+    // function copyLink(imageid) {
+    //   console.log("copied");
+    //   var copyText = document.getElementById(imageid);
+    //   copyText.select();
+    //   document.execCommand("copy");
+    //   navigator.clipboard.writeText(copyText);
+
+    //   console.log(copyText.value)
+    //   alert("Link copied to clipboard: " + copyText.value);
+    // }
     // copyLink =(element) => {
     //  document.getElementById(element).select();
     //  document.execCommand("copy");
