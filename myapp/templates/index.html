@@ -39,11 +39,11 @@
                     <p><a href="{{image.img_path.url}}" target="_blank"> Open In New Tab</a>
                     </p>
                     
-                    <button class="rounded btn-danger" value="{{image.img_path.url}}" id="copy" onclick=copyFunction() >📋Copy Link</button>'>
+                    <button class="rounded btn-danger" value="{{image.img_path.url}}" id="copy1" onclick=copyFunction() >📋Copy Link</button>'>
             
             <img class="rounded image" src="{{image.img_path.url}}" alt="{{image.img_name}}">
             </a>
-            <input type="text" id="{{image.img_path.url}}" class="d-none form-control input-sm " value="https://kalebsgallery.herokuapp.com{{image.img_path.url}}">
+            <input type="text" id="copy" class="d-none form-control input-sm " value="https://kalebsgallery.herokuapp.com{{image.img_path.url}}">
 
                     <!-- <a  data-fancybox="gallery" href="{{image.img_path.url}}" data-caption="spa"> <img src="{{image.img_path.url}}" alt="" ></a> -->
                     <!-- "{{image.img_name}}{{image.img_decription}}  " -->
@@ -182,7 +182,7 @@ function copyFunction() {
         navigator.clipboard.writeText(copiedLinkText.value);
       
         /* Alert the copied text */
-        alert("Successfully copied the link.Now share your favourite image:" + copiedLinkText.value);
+        alert("Link copied to clipboard:" + copiedLinkText.value);
       }
     // function copyLink(imageid) {
     //   console.log("copied");
