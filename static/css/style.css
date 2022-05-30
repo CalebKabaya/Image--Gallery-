@@ -108,8 +108,12 @@ h1{
 
 
 }
+input::placeholder {
+    font-size: 12px;
+}
 #form{
     border: 2px solid rgb(253, 0, 0);
+    font-size: 17px;
 
 }
 
